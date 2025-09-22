@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 1. Reading 2: FOUR KEYS TO HAPPINESS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .container {
+            max-width: 900px;
+        }
+        .score-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #e5e7eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .correct-answer-icon {
+            color: #10b981; /* green-500 */
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        .incorrect-answer-icon {
+            color: #ef4444; /* red-500 */
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        .correct-border {
+            border-color: #10b981;
+        }
+        .incorrect-border {
+            border-color: #ef4444;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center py-12">
+    <div class="container bg-white p-8 rounded-2xl shadow-xl space-y-8">
+        <header class="text-center space-y-2">
+            <div id="score-display" class="score-circle mx-auto mb-4 font-bold text-gray-700">
+                <span id="score-text" class="text-3xl">--/20</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-800">Unit -1. Reading 2. FOUR KEYS TO HAPPINESS</h1>
+            <p class="text-lg text-gray-500">Practice your reading comprehension skills by answering the questions below.</p>
+        </header>
+
+        <form id="quiz-form" class="space-y-6">
+
+            <!-- Section 1: Questions 1-5 -->
+            <section class="space-y-4">
+                <h2 class="text-2xl font-semibold text-gray-700">Questions 1 to 5</h2>
+                <p class="text-sm text-gray-500 italic">From the following headings 1-5, choose a suitable title for paragraphs. Write the correct number on your answer sheet.</p>
+
+                <div class="grid md:grid-cols-2 gap-4 text-gray-600">
+                    <div>1. Spending money wisely.</div>
+                    <div>2. The importance of maintaining relationships.</div>
+                    <div>3. Researchers' ideas on happiness.</div>
+                    <div>4. The benefits of helping others.</div>
+                    <div>5. Physical work and happiness</div>
+                </div>
+
+                <div class="space-y-2 mt-4">
+                    <div>
+                        <label class="block text-gray-700">Paragraph A =</label>
+                        <input type="text" id="q1" name="q1" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700">Paragraph B =</label>
+                        <input type="text" id="q2" name="q2" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700">Paragraph C =</label>
+                        <input type="text" id="q3" name="q3" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700">Paragraph D =</label>
+                        <input type="text" id="q4" name="q4" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700">Paragraph E =</label>
+                        <input type="text" id="q5" name="q5" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Questions 6-10 -->
+            <section class="space-y-4">
+                <h2 class="text-2xl font-semibold text-gray-700">Questions 6 to 10</h2>
+                <p class="text-sm text-gray-500 italic">Do the following statements agree with the information given in the reading passage? Write **True (T)**, **False (F)**, or **Not given (NG)**.</p>
+                <div class="space-y-2">
+                    <div class="flex items-center space-x-2" id="q6-container">
+                        <span>6. The same things make all people happy.</span>
+                        <input type="text" id="q6" name="q6" class="ml-auto w-20 px-2 py-1 bg-white border border-gray-300 rounded-md shadow-sm text-sm uppercase">
+                    </div>
+                    <div class="flex items-center space-x-2" id="q7-container">
+                        <span>7. Robert Waldinger studies children's behavior.</span>
+                        <input type="text" id="q7" name="q7" class="ml-auto w-20 px-2 py-1 bg-white border border-gray-300 rounded-md shadow-sm text-sm uppercase">
+                    </div>
+                    <div class="flex items-center space-x-2" id="q8-container">
+                        <span>8. Waldinger studies both rich and poor people.</span>
+                        <input type="text" id="q8" name="q8" class="ml-auto w-20 px-2 py-1 bg-white border border-gray-300 rounded-md shadow-sm text-sm uppercase">
+                    </div>
+                    <div class="flex items-center space-x-2" id="q9-container">
+                        <span>9. Physical activity can improve our mental state.</span>
+                        <input type="text" id="q9" name="q9" class="ml-auto w-20 px-2 py-1 bg-white border border-gray-300 rounded-md shadow-sm text-sm uppercase">
+                    </div>
+                    <div class="flex items-center space-x-2" id="q10-container">
+                        <span>10. Staying indoors is better for our health.</span>
+                        <input type="text" id="q10" name="q10" class="ml-auto w-20 px-2 py-1 bg-white border border-gray-300 rounded-md shadow-sm text-sm uppercase">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Questions 11-15 -->
+            <section class="space-y-4">
+                <h2 class="text-2xl font-semibold text-gray-700">Questions 11 to 15</h2>
+                <p class="text-sm text-gray-500 italic">Choose the correct option (A, B, or C) for each question.</p>
+                <div class="space-y-4">
+                    <div id="q11-container">
+                        <p class="text-gray-700">11. Happiness depends on the way we _______ money.</p>
+                        <div class="flex items-center space-x-4 mt-2">
+                            <label class="flex items-center"><input type="radio" name="q11" value="B" class="form-radio text-indigo-600"> <span class="ml-2">A. get</span></label>
+                            <label class="flex items-center"><input type="radio" name="q11" value="A" class="form-radio text-indigo-600"> <span class="ml-2">B. spend</span></label>
+                            <label class="flex items-center"><input type="radio" name="q11" value="C" class="form-radio text-indigo-600"> <span class="ml-2">C. save</span></label>
+                        </div>
+                    </div>
+                    <div id="q12-container">
+                        <p class="text-gray-700">12. Graham Hill says that we should buy _______ things.</p>
+                        <div class="flex items-center space-x-4 mt-2">
+                            <label class="flex items-center"><input type="radio" name="q12" value="A" class="form-radio text-indigo-600"> <span class="ml-2">A. more</span></label>
+                            <label class="flex items-center"><input type="radio" name="q12" value="B" class="form-radio text-indigo-600"> <span class="ml-2">B. expensive</span></label>
+                            <label class="flex items-center"><input type="radio" name="q12" value="C" class="form-radio text-indigo-600"> <span class="ml-2">C. less</span></label>
+                        </div>
+                    </div>
+                    <div id="q13-container">
+                        <p class="text-gray-700">13. Giving money can affect _______ very much.</p>
+                        <div class="flex items-center space-x-4 mt-2">
+                            <label class="flex items-center"><input type="radio" name="q13" value="A" class="form-radio text-indigo-600"> <span class="ml-2">A. the giver</span></label>
+                            <label class="flex items-center"><input type="radio" name="q13" value="B" class="form-radio text-indigo-600"> <span class="ml-2">B. the receiver</span></label>
+                            <label class="flex items-center"><input type="radio" name="q13" value="C" class="form-radio text-indigo-600"> <span class="ml-2">C. both the giver and receiver</span></label>
+                        </div>
+                    </div>
+                    <div id="q14-container">
+                        <p class="text-gray-700">14. Volunteering helps us to _______ our problems.</p>
+                        <div class="flex items-center space-x-4 mt-2">
+                            <label class="flex items-center"><input type="radio" name="q14" value="A" class="form-radio text-indigo-600"> <span class="ml-2">A. forget</span></label>
+                            <label class="flex items-center"><input type="radio" name="q14" value="B" class="form-radio text-indigo-600"> <span class="ml-2">B. remember</span></label>
+                            <label class="flex items-center"><input type="radio" name="q14" value="C" class="form-radio text-indigo-600"> <span class="ml-2">C. reduce</span></label>
+                        </div>
+                    </div>
+                    <div id="q15-container">
+                        <p class="text-gray-700">15. A way to give away is donating one's _______.</p>
+                        <div class="flex items-center space-x-4 mt-2">
+                            <label class="flex items-center"><input type="radio" name="q15" value="A" class="form-radio text-indigo-600"> <span class="ml-2">A. things</span></label>
+                            <label class="flex items-center"><input type="radio" name="q15" value="B" class="form-radio text-indigo-600"> <span class="ml-2">B. time</span></label>
+                            <label class="flex items-center"><input type="radio" name="q15" value="C" class="form-radio text-indigo-600"> <span class="ml-2">C. food</span></label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Questions 16-20 -->
+            <section class="space-y-4">
+                <h2 class="text-2xl font-semibold text-gray-700">Questions 16 to 20</h2>
+                <p class="text-sm text-gray-500 italic">Complete the text below with words from the passage. Choose NO MORE THAN ONE WORD from the box for each answer.</p>
+                <div class="bg-gray-200 p-4 rounded-md">
+                    <span class="font-bold">Words:</span> <span class="text-sm text-gray-600">mood, volunteer, factor, support, long-term, community</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed">
+                    <p>It is universally accepted that there is no single recipe for happiness. Something that makes one person happy may not make another one contented. Many things that we consider important can give happiness for a short time only. However, researchers say that there are some basic things that can increase our <input type="text" id="q16" name="q16" class="w-32 inline-block px-2 py-1 border border-gray-300 rounded-md shadow-sm text-sm"> happiness. One important <input type="text" id="q17" name="q17" class="w-32 inline-block px-2 py-1 border border-gray-300 rounded-md shadow-sm text-sm"> that makes people happy is their social connections. Studies have found that people who have very strong connections with their friends, families and <input type="text" id="q18" name="q18" class="w-32 inline-block px-2 py-1 border border-gray-300 rounded-md shadow-sm text-sm"> are happier than others. These people regularly meet and <input type="text" id="q19" name="q19" class="w-32 inline-block px-2 py-1 border border-gray-300 rounded-md shadow-sm text-sm"> each other in times of need. Being active can also contribute to our well-being. It makes us healthy and happy. The best way to change our <input type="text" id="q20" name="q20" class="w-32 inline-block px-2 py-1 border border-gray-300 rounded-md shadow-sm text-sm"> is to take a walk outdoors with our pets and enjoy nature.</p>
+                </div>
+            </section>
+
+            <button type="submit" id="submit-button" class="w-full bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transition duration-300">
+                Submit Answers
+            </button>
+        </form>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('quiz-form');
+            const submitButton = document.getElementById('submit-button');
+            const scoreText = document.getElementById('score-text');
+            const scoreCircle = document.getElementById('score-display');
+
+            const answerKey = {
+                'q1': '3',
+                'q2': '2',
+                'q3': '5',
+                'q4': '1',
+                'q5': '4',
+                'q6': 'F',
+                'q7': 'F',
+                'q8': 'NG',
+                'q9': 'T',
+                'q10': 'F',
+                'q11': 'B',
+                'q12': 'C',
+                'q13': 'C',
+                'q14': 'A',
+                'q15': 'B',
+                'q16': 'long-term',
+                'q17': 'factor',
+                'q18': 'community',
+                'q19': 'support',
+                'q20': 'mood'
+            };
+
+            const totalQuestions = Object.keys(answerKey).length;
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                let score = 0;
+                const inputs = form.querySelectorAll('input, button');
+                const formElements = form.querySelectorAll('input, select, textarea');
+
+                formElements.forEach(el => el.disabled = true);
+                submitButton.disabled = true;
+
+                for (let i = 1; i <= totalQuestions; i++) {
+                    const qId = `q${i}`;
+                    const correctAnswer = answerKey[qId].trim().toLowerCase();
+                    let userAnswer = '';
+                    let inputElement;
+                    let resultIconSpan;
+
+                    if (i >= 11 && i <= 15) {
+                        inputElement = document.querySelector(`input[name="${qId}"]:checked`);
+                        if (inputElement) {
+                            userAnswer = inputElement.value.trim().toLowerCase();
+                        }
+                    } else {
+                        inputElement = document.getElementById(qId);
+                        if (inputElement) {
+                            userAnswer = inputElement.value.trim().toLowerCase();
+                        }
+                    }
+
+                    const questionContainer = document.getElementById(qId + '-container') || inputElement.closest('div');
+
+                    resultIconSpan = document.createElement('span');
+                    resultIconSpan.classList.add('font-bold', 'text-xl', 'ml-2');
+
+                    if (userAnswer === correctAnswer) {
+                        score++;
+                        resultIconSpan.textContent = '✓';
+                        resultIconSpan.classList.add('correct-answer-icon');
+                        if (inputElement) {
+                            if (inputElement.type === 'text') {
+                                inputElement.classList.add('correct-border');
+                            }
+                        }
+                    } else {
+                        resultIconSpan.textContent = '✗';
+                        resultIconSpan.classList.add('incorrect-answer-icon');
+                        if (inputElement) {
+                            if (inputElement.type === 'text') {
+                                inputElement.classList.add('incorrect-border');
+                            }
+                        }
+                    }
+
+                    // Append the icon for all question types
+                    if (inputElement) {
+                        const existingIcon = questionContainer.querySelector('.correct-answer-icon, .incorrect-answer-icon');
+                        if (existingIcon) {
+                            existingIcon.remove();
+                        }
+                        questionContainer.appendChild(resultIconSpan);
+                    }
+
+                    // For incorrect answers, also show the correct answer
+                    if (userAnswer !== correctAnswer && inputElement) {
+                         const correctHintSpan = document.createElement('span');
+                         correctHintSpan.classList.add('text-sm', 'text-red-500', 'ml-2');
+                         correctHintSpan.textContent = `Correct: ${answerKey[qId]}`;
+                         questionContainer.appendChild(correctHintSpan);
+                    }
+                }
+
+                // Display total score
+                scoreText.textContent = `${score}/${totalQuestions}`;
+                scoreCircle.classList.remove('bg-gray-200');
+                scoreCircle.classList.add('bg-gray-800', 'text-white');
+                scoreText.classList.add('font-bold', 'text-3xl');
+
+                setTimeout(() => {
+                    formElements.forEach(el => el.disabled = false);
+                    submitButton.disabled = false;
+                    scoreText.textContent = '--/20';
+                    scoreCircle.classList.remove('bg-gray-800', 'text-white');
+                    scoreCircle.classList.add('bg-gray-200');
+
+                    document.querySelectorAll('.correct-answer-icon, .incorrect-answer-icon').forEach(el => el.remove());
+                    document.querySelectorAll('.correct-border, .incorrect-border').forEach(el => el.classList.remove('correct-border', 'incorrect-border'));
+                }, 600000); // 10 minutes
+            });
+        });
+    </script>
+</body>
+</html>
